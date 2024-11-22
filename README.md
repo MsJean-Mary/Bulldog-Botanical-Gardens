@@ -6,7 +6,7 @@
 Simply install all packages with 
 
 ```
-WIP
+npm install # install all needed packages
 ```
 
 Then run 

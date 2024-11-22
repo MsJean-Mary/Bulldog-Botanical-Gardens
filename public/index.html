@@ -3,9 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SERMHS Garden</title>
+    <style>
+        :root {
+            --primary: #2c8d3a;
+            --primary-dark: #1e5f27;
+            --secondary: #f39c12;
+            --background: #f0f4f8;
+            --text: #333333;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-right: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .login-btn {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #hero {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #content {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .content-block {
+            background-color: var(--card-bg);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            padding: 1rem;
+            width: calc(33.33% - 2rem);
+            min-width: 250px;
+        }
+
+        .content-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-block {
+                width: calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-block {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <div class="logo">SERMHS Garden</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li> <!--add more as needed-->
+            </ul>
+            <button class="login-btn">Log In</button>
+        </nav>
+    </header>
+
+    <div style="position: relative; height: 200px;">
+        <img src="img/banner.jpg?height=200&width=1600" alt="Garden Banner" class="banner">
+        <span style="position: absolute; bottom: 5px; right: 10px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 2px 5px; font-size: 0.8rem;">Annie Spratt @ Unsplash</span>
+    </div>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to the Southeast Raleigh Magnet High School Garden</h1>
+            <p>Cultivating knowledge, growing community</p>
+        </section>
+
+        <section id="content">
+            <div class="content-block">
+                <img src="/placeholder.svg?height=300&width=400" alt="Our Mission">
+                <h2>Our Mission</h2>
+                <p>To educate and inspire students through hands-on gardening experiences.</p>
+            </div>
+            <div class="content-block">
+                <img src="/placeholder.svg?height=300&width=400" alt="Upcoming Events">
+                <h2>Upcoming Events</h2>
+                <p>Add this later</p>
+            </div>
+            <div class="content-block">
+                <img src="/placeholder.svg?height=300&width=400" alt="Get Involved">
+                <h2>Get Involved</h2>
+                <p>Volunteer opportunities available for students, parents, and community members.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SERMHS. All rights reserved.</p>
+    </footer>
 </body>
 </html>

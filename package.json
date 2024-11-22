@@ -1,0 +1,16 @@
+{
+  "name": "germhs_garden",
+  "version": "0.0.1",
+  "description": "Your app description",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "node main.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
