@@ -5,7 +5,7 @@
 
 Simply install all packages with 
 
-```
+```shell
 npm install # install all needed packages
 ```
 
