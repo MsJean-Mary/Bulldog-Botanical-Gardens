@@ -4,129 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SERMHS Garden</title>
-    <style>
-        :root {
-            --primary: #2c8d3a;
-            --primary-dark: #1e5f27;
-            --secondary: #f39c12;
-            --background: #f0f4f8;
-            --text: #333333;
-            --card-bg: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--background);
-        }
-
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 1rem;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        nav ul {
-            display: flex;
-            list-style-type: none;
-        }
-
-        nav ul li {
-            margin-right: 1rem;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .login-btn {
-            background-color: var(--secondary);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-        }
-
-        .banner {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        #hero {
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        #hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        #content {
-            padding: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .content-block {
-            background-color: var(--card-bg);
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin: 1rem;
-            padding: 1rem;
-            width: calc(33.33% - 2rem);
-            min-width: 250px;
-        }
-
-        .content-block img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-        }
-
-        footer {
-            background-color: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .content-block {
-                width: calc(50% - 2rem);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .content-block {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
@@ -136,44 +14,147 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li> <!--add more as needed-->
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="login-btn">Log In</button>
         </nav>
     </header>
 
-    <div style="position: relative; height: 200px;">
-        <img src="img/banner.jpg?height=200&width=1600" alt="Garden Banner" class="banner">
-        <span style="position: absolute; bottom: 5px; right: 10px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 2px 5px; font-size: 0.8rem;">Annie Spratt @ Unsplash</span>
+    <div id="home" class="banner-container" style="background-image: url('img/banner.jpg');">
+        <div class="banner-overlay">
+            <div class="banner-text">
+                <h1>Welcome to the Southeast Raleigh Magnet High School Garden</h1>
+                <p>Cultivating knowledge, growing community</p>
+            </div>
+        </div>
+        <span class="banner-credit">Annie Spratt @ Unsplash</span>
     </div>
 
     <main>
-        <section id="hero">
-            <h1>Welcome to the Southeast Raleigh Magnet High School Garden</h1>
-            <p>Cultivating knowledge, growing community</p>
+        <section id="about">
+            <h2>About Our Garden</h2>
+            <div id="content">
+                <div class="content-block">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Our Mission">
+                    <h3>Our Mission</h3>
+                    <p>To educate and inspire students through hands-on gardening experiences, fostering a deep connection with nature and sustainable practices.</p>
+                </div>
+                <div class="content-block">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Upcoming Events">
+                    <h3>Upcoming Events</h3>
+                    <ul>
+                        <li>This content will be imported dynamically</li>
+                        <li>This content will be imported dynamically</li>
+                        <li>This content will be imported dynamically</li>
+                
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <img src="/placeholder.svg?height=300&width=400" alt="Get Involved">
+                    <h3>Get Involved</h3>
+                    <p>Volunteer opportunities available for students, parents, and community members. Join us in nurturing our garden and growing together!</p>
+                </div>
+            </div>
         </section>
 
-        <section id="content">
-            <div class="content-block">
-                <img src="/placeholder.svg?height=300&width=400" alt="Our Mission">
-                <h2>Our Mission</h2>
-                <p>To educate and inspire students through hands-on gardening experiences.</p>
+        <section id="gallery">
+            <h2>Garden Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="/placeholder.svg?height=200&width=200" alt="Garden Image 1"></div>
+                <div class="gallery-item"><img src="/placeholder.svg?height=200&width=200" alt="Garden Image 2"></div>
+                <div class="gallery-item"><img src="/placeholder.svg?height=200&width=200" alt="Garden Image 3"></div>
+                <div class="gallery-item"><img src="/placeholder.svg?height=200&width=200" alt="Garden Image 4"></div>
+                <div class="gallery-item"><img src="/placeholder.svg?height=200&width=200" alt="Garden Image 5"></div>
             </div>
-            <div class="content-block">
-                <img src="/placeholder.svg?height=300&width=400" alt="Upcoming Events">
-                <h2>Upcoming Events</h2>
-                <p>Add this later</p>
-            </div>
-            <div class="content-block">
-                <img src="/placeholder.svg?height=300&width=400" alt="Get Involved">
-                <h2>Get Involved</h2>
-                <p>Volunteer opportunities available for students, parents, and community members.</p>
-            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form" onsubmit="openMail(event)">
+                <input type="text" id="subject" placeholder="Subject" required>
+                <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+                <p>When you click send, a new mail tab will be opened</p>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 SERMHS. All rights reserved.</p>
+        <p>&copy; 2024 SERMHS Garden. All rights reserved.</p>
     </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+
+    <div class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Enlarged gallery image">
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const backToTop = document.querySelector('.back-to-top');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+            backToTop.classList.toggle('visible', window.scrollY > 300);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.content-block').forEach(block => {
+            observer.observe(block);
+        });
+
+        function openMail(event) {
+            event.preventDefault();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const mailtoLink = `mailto:contact@sermhs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+            window.location.href = mailtoLink;
+        }
+
+        // lightbox 
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        // smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // back to top button
+        document.querySelector('.back-to-top').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
