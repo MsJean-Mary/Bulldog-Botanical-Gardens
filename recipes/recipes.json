@@ -1,0 +1,57 @@
+{
+    "These are currently placeholders, remove this and the others to add your recipies": [{}],
+    "recipes": [
+        {
+            "id": "1",
+            "title": "Garden Fresh Salad",
+            "description": "A refreshing salad made with ingredients straight from our garden.",
+            "image": "/images/garden-salad.jpg",
+            "steps": [
+                "Harvest fresh lettuce, tomatoes, cucumbers, and herbs from the garden.",
+                "Wash all vegetables thoroughly.",
+                "Chop the lettuce, slice the tomatoes and cucumbers.",
+                "In a large bowl, combine the chopped vegetables.",
+                "Add chopped fresh herbs like basil and parsley.",
+                "Drizzle with olive oil and balsamic vinegar.",
+                "Toss the salad gently to combine all ingredients.",
+                "Season with salt and pepper to taste.",
+                "Serve immediately and enjoy your garden-fresh salad!"
+            ]
+        },
+        {
+            "id": "2",
+            "title": "Herb-Roasted Vegetables",
+            "description": "A delicious medley of roasted vegetables seasoned with garden-fresh herbs.",
+            "image": "/images/roasted-vegetables.jpg",
+            "steps": [
+                "Preheat the oven to 425°F (220°C).",
+                "Harvest a variety of vegetables from the garden (e.g., carrots, bell peppers, zucchini, onions).",
+                "Wash and chop the vegetables into similar-sized pieces.",
+                "In a large bowl, toss the vegetables with olive oil.",
+                "Pick fresh herbs like rosemary, thyme, and sage from the garden.",
+                "Chop the herbs and add them to the vegetables.",
+                "Spread the vegetables on a baking sheet in a single layer.",
+                "Roast for 25-30 minutes, stirring halfway through.",
+                "Season with salt and pepper before serving."
+            ]
+        },
+        {
+            "id": "3",
+            "title": "Tomato Basil Soup",
+            "description": "A comforting soup made with ripe tomatoes and fragrant basil from our garden.",
+            "image": "/images/tomato-soup.jpg",
+            "steps": [
+                "Pick ripe tomatoes and fresh basil from the garden.",
+                "Wash the tomatoes and roughly chop them.",
+                "In a large pot, sauté chopped onions and garlic in olive oil.",
+                "Add the chopped tomatoes and cook for 5 minutes.",
+                "Pour in vegetable broth and bring to a boil.",
+                "Reduce heat and simmer for 15-20 minutes.",
+                "Use an immersion blender to puree the soup until smooth.",
+                "Stir in chopped fresh basil leaves.",
+                "Season with salt and pepper to taste.",
+                "Serve hot, garnished with additional basil leaves."
+            ]
+        }
+    ]
+}
