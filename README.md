@@ -16,5 +16,5 @@ npm run dev # for dev enviorment
 ```
 or
 ```shell
-npm run build # for production enviornemnt
+npm run start # for production enviornemnt
 ```
