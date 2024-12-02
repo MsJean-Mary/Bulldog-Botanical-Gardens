@@ -16,7 +16,7 @@ app.get('/recipes', (req, res) => {
 });
 
 app.get('/api/recipes', (req, res) => {
-    const recipesFile = path.join(__dirname, 'recipes', 'recipes.json');
+    const recipesFile = path.join(__dirname, 'DynamicContent', 'recipes.json');
     fs.readFile(recipesFile, 'utf8', (err, data) => {
         if (err) {
             return res.status(500).send('Unable to read recipes file');
