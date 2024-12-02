@@ -5,7 +5,7 @@
             "id": "1",
             "title": "Garden Fresh Salad",
             "description": "A refreshing salad made with ingredients straight from our garden.",
-            "image": "/placeholder.svg?height=200&width=200",
+            "image": "img/placeholder.svg?height=200&width=200",
             "steps": [
                 "Harvest fresh lettuce, tomatoes, cucumbers, and herbs from the garden.",
                 "Wash all vegetables thoroughly.",
@@ -22,7 +22,7 @@
             "id": "2",
             "title": "Herb-Roasted Vegetables",
             "description": "A delicious medley of roasted vegetables seasoned with garden-fresh herbs.",
-            "image": "/placeholder.svg?height=200&width=200",
+            "image": "img/placeholder.svg?height=200&width=200",
             "steps": [
                 "Preheat the oven to 425°F (220°C).",
                 "Harvest a variety of vegetables from the garden (e.g., carrots, bell peppers, zucchini, onions).",
@@ -39,7 +39,7 @@
             "id": "3",
             "title": "Tomato Basil Soup",
             "description": "A comforting soup made with ripe tomatoes and fragrant basil from our garden.",
-            "image": "/placeholder.svg?height=200&width=200",
+            "image": "img/placeholder.svg?height=200&width=200",
             "steps": [
                 "Pick ripe tomatoes and fresh basil from the garden.",
                 "Wash the tomatoes and roughly chop them.",
