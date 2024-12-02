@@ -25,6 +25,16 @@ app.get('/api/recipes', (req, res) => {
     });
 });
 
+app.get('/api/navbar', (req, res) => {
+    const recipesFile = path.join(__dirname, 'DynamicContent', 'navbar.json');
+    fs.readFile(recipesFile, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Unable to read recipes file');
+        }
+        res.json(JSON.parse(data));
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Running on http://localhost:${PORT}`);
 });
