@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERMHS Garden - Health Benefits</title>
+    <link rel="stylesheet" href="css/health.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SERMHS Garden</div>
+            <ul>
+                <!--dynamically imported navbar-->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Health Benefits of Garden Plants</h1>
+        <div class="health-grid">
+        <!--dynamically imported health benefits-->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SERMHS Garden. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+    <script src="js/health.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

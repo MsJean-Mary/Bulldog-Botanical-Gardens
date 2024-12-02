@@ -1,0 +1,29 @@
+{
+    "healthBenefits": [
+        {
+            "name": "Aloe Vera",
+            "description": "Aloe Vera is known for its soothing and healing properties, especially for skin conditions.",
+            "image": "img/placeholder.svg?height=150&width=250"
+        },
+        {
+            "name": "Lavender",
+            "description": "Lavender is often used for its calming effects and can help reduce stress and anxiety.",
+            "image": "img/placeholder.svg?height=150&width=250"
+        },
+        {
+            "name": "Mint",
+            "description": "Mint is great for digestion and can help relieve indigestion and nausea.",
+            "image": "img/placeholder.svg?height=150&width=250"
+        },
+        {
+            "name": "Rosemary",
+            "description": "Rosemary can improve concentration and memory, and has anti-inflammatory properties.",
+            "image": "img/placeholder.svg?height=150&width=250"
+        },
+        {
+            "name": "Basil",
+            "description": "Basil has antibacterial properties and is rich in antioxidants.",
+            "image": "img/placeholder.svg?height=150&width=250"
+        }
+    ]
+}
