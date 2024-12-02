@@ -14,7 +14,7 @@ Follow these steps to add your own recipes to the `recipes.json` file:
             "id": "unique_id",
             "title": "Recipe Title",
             "description": "A brief description of the recipe.",
-            "image": "/path/to/image.jpg",
+            "image": "/path/to/image.jpg?height=200&width=200",
             "steps": [
                  "Step 1",
                  "Step 2",
@@ -32,7 +32,7 @@ Follow these steps to add your own recipes to the `recipes.json` file:
     - Replace the `id` with a unique identifier for your recipe.
     - Update the `title` with the name of your recipe.
     - Write a brief `description` of your recipe.
-    - Provide the path to an `image` representing your recipe. Please upload the recipe to the recipes folder in the folter 'img'.
+    - Provide the path to an `image` representing your recipe. Please upload the recipe to the recipes folder in the folter 'img'. Additionally please keep `?height=200&width=200` at the end of your file name and ideally use a photo in a square aspect ratio.
     - List the `steps` required to prepare your recipe.
 
 5. **Example of a New Recipe:**
@@ -41,7 +41,7 @@ Follow these steps to add your own recipes to the `recipes.json` file:
          "id": "4",
          "title": "Homemade Pizza",
          "description": "A classic homemade pizza with fresh ingredients.",
-         "image": "/img/recipes/homemade-pizza.jpg",
+         "image": "/img/recipes/homemade-pizza.jpg?height=200&width=200",
          "steps": [
               "Prepare the pizza dough and let it rise.",
               "Preheat the oven to 475°F (245°C).",
@@ -50,7 +50,7 @@ Follow these steps to add your own recipes to the `recipes.json` file:
               "Add your favorite toppings (e.g., cheese, pepperoni, vegetables).",
               "Bake in the oven for 12-15 minutes until the crust is golden brown.",
               "Remove from the oven and let cool for a few minutes.",
-              "Slice and serve hot."
+              "Slice and serve hot." <---- JSON require commas until the last item listed (do not include this)
          ]
     }
     ```
