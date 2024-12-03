@@ -27,6 +27,6 @@ Follow these steps to set up and run the project:
 
 For instructions on editing specific parts of the website:  
 - Check the [ToDo.md](https://github.com/MsJean-Mary/SERMHS_SchoolGarden/blob/main/ToDo.md) file for tasks and updates.  
-- Explore the [guides folder](https://github.com/MsJean-Mary/SERMHS_SchoolGarden/tree/main/guides) for detailed editing guides.  
+- Explore the [guides folder](https://github.com/MsJean-Mary/SERMHS_SchoolGarden/tree/main/guides) for detailed editing guides. If you are looking at the guides and see code click the button at the top that says preview to be able to see the correct version. 
 
 ---
