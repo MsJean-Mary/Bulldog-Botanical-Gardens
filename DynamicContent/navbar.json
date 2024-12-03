@@ -24,5 +24,20 @@
             "name": "Contact",
             "link": "#contact"
         }
+    ],
+    "name": "More ↓",
+    "dropdown": [
+        {
+            "name": "Blog",
+            "link": "#blog"
+        },
+        {
+            "name": "Events",
+            "link": "#events"
+        },
+        {
+            "name": "Garden stats",
+            "link": "#stats"
+        }
     ]
 }
