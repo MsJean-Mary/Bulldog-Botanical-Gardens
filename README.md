@@ -26,7 +26,7 @@ Follow these steps to set up and run the project:
 ## Editing the Website  
 
 For instructions on editing specific parts of the website:  
-- Check the `todo.md` file for tasks and updates.  
-- Explore the `guides` folder for detailed editing guides.  
+- Check the [ToDo.md](https://github.com/MsJean-Mary/SERMHS_SchoolGarden/blob/main/ToDo.md) file for tasks and updates.  
+- Explore the [guides folder](https://github.com/MsJean-Mary/SERMHS_SchoolGarden/tree/main/guides) for detailed editing guides.  
 
 ---
