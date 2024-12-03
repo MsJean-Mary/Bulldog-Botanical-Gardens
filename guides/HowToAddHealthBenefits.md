@@ -32,7 +32,7 @@ Follow these steps to add new health benefits to the `health.json` file:
         "name": "Chamomile",
         "description": "Chamomile is known for its calming effects and can help with sleep and digestion.",
         "image": "img/chamomile.jpg?height=150&width=250"
-    }
+    } <---- JSON require commas until the last item listed, add a comma here if it is not the last one. (do not include this)
     ```
 
 6. **Save the File:**
