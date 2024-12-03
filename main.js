@@ -19,6 +19,10 @@ app.get('/health', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'health.html'));
 });
 
+app.get('/stats', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'stats.html'));
+});
+
 // we could just put the json's in the public folder but whats the fun in that?
 
 app.get('/api/recipes', (req, res) => {
@@ -60,6 +64,38 @@ app.get('/api/navbar', (req, res) => {
         res.json(JSON.parse(data));
     });
 });
+
+// actual api routes
+
+app.get('/api/stats', (req, res) => {
+    const statsFile = path.join(__dirname, 'DynamicContent', 'statdata.json');
+    const startTime = Date.now();
+
+    const checkFileAndSend = () => {
+        fs.open(statsFile, 'r', (err, fd) => {
+            if (err) {
+                if (err.code === 'EBUSY') {
+                    if (Date.now() - startTime > 5000) {
+                        return res.status(500).send('Unable to read stats file: file is busy');
+                    }
+                    setTimeout(checkFileAndSend, 50);
+                } else {
+                    return res.status(500).send('Unable to read stats file');
+                }
+            } else {
+                fs.readFile(fd, 'utf8', (err, data) => {
+                    if (err) {
+                        return res.status(500).send('Unable to read stats file');
+                    }
+                    res.json(JSON.parse(data));
+                });
+            }
+        });
+    };
+
+    checkFileAndSend();
+});
+
 
 app.listen(PORT, () => {
     console.log(`Running on http://localhost:${PORT}`);

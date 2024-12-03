@@ -37,7 +37,7 @@
         },
         {
             "name": "Garden stats",
-            "link": "#stats"
+            "link": "/stats"
         }
     ]
 }

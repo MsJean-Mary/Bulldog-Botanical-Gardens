@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERMHS Garden - Garden Stats</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/stats.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">SERMHS Garden</div>
+            <ul>
+                <!-- Dynamically imported navbar -->
+            </ul>
+            <button class="login-btn">Log In</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Garden Stats</h1>
+        <div class="current-conditions">
+            <h2>Current Conditions</h2>
+            <div class="conditions-grid">
+                <div class="condition humidity">
+                    <i class="fas fa-tint"></i>
+                    <h3>Humidity</h3>
+                    <p id="currentHumidity">--</p>
+                </div>
+                <div class="condition wind">
+                    <i class="fas fa-wind"></i>
+                    <h3>Wind Speed</h3>
+                    <p id="currentWindSpeed">--</p>
+                </div>
+                <div class="condition soil-temp">
+                    <i class="fas fa-thermometer-half"></i>
+                    <h3>Soil Temperature</h3>
+                    <p id="currentSoilTemp">--</p>
+                </div>
+                <div class="condition soil-humidity">
+                    <i class="fas fa-water"></i>
+                    <h3>Soil Humidity</h3>
+                    <p id="currentSoilHumidity">--</p>
+                </div>
+            </div>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <canvas id="humidityChart"></canvas>
+            </div>
+            <div class="stat-card">
+                <canvas id="windSpeedChart"></canvas>
+            </div>
+            <div class="stat-card">
+                <canvas id="soilTempChart"></canvas>
+            </div>
+            <div class="stat-card">
+                <canvas id="soilHumidityChart"></canvas>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SERMHS Garden. All rights reserved.</p>
+    </footer>
+
+        <script>
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                header.classList.toggle('scrolled', window.scrollY > 0);
+            });
+        
+            function updateCurrentConditions(data) {
+                document.getElementById('currentHumidity').textContent = data.humidity[data.humidity.length - 1] + '%';
+                document.getElementById('currentWindSpeed').textContent = data.windSpeed[data.windSpeed.length - 1] + ' mph';
+                document.getElementById('currentSoilTemp').textContent = data.soilTemp[data.soilTemp.length - 1] + '°F';
+                document.getElementById('currentSoilHumidity').textContent = data.soilHumidity[data.soilHumidity.length - 1] + '%';
+            }
+        
+            function createCharts(data) {
+                const commonOptions = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            font: {
+                                size: 16,
+                                weight: 'bold',
+                            },
+                        },
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        },
+                    },
+                };
+        
+                const humidityChart = new Chart(document.getElementById('humidityChart'), {
+                    type: 'line',
+                    data: {
+                        labels: data.timestamps,
+                        datasets: [{
+                            label: 'Humidity (%)',
+                            data: data.humidity,
+                            borderColor: 'rgba(52, 152, 219, 1)',
+                            backgroundColor: 'rgba(52, 152, 219, 0.2)',
+                            tension: 0.1,
+                            fill: true,
+                        }]
+                    },
+                    options: {
+                        ...commonOptions,
+                        plugins: {
+                            ...commonOptions.plugins,
+                            title: {
+                                ...commonOptions.plugins.title,
+                                text: 'Humidity Over Time',
+                            },
+                        },
+                    }
+                });
+        
+                const windSpeedChart = new Chart(document.getElementById('windSpeedChart'), {
+                    type: 'line',
+                    data: {
+                        labels: data.timestamps,
+                        datasets: [{
+                            label: 'Wind Speed (mph)',
+                            data: data.windSpeed,
+                            borderColor: 'rgba(231, 76, 60, 1)',
+                            backgroundColor: 'rgba(231, 76, 60, 0.2)',
+                            tension: 0.1,
+                            fill: true,
+                        }]
+                    },
+                    options: {
+                        ...commonOptions,
+                        plugins: {
+                            ...commonOptions.plugins,
+                            title: {
+                                ...commonOptions.plugins.title,
+                                text: 'Wind Speed Over Time',
+                            },
+                        },
+                    }
+                });
+        
+                const soilTempChart = new Chart(document.getElementById('soilTempChart'), {
+                    type: 'line',
+                    data: {
+                        labels: data.timestamps,
+                        datasets: [{
+                            label: 'Soil Temperature (°F)',
+                            data: data.soilTemp,
+                            borderColor: 'rgba(241, 196, 15, 1)',
+                            backgroundColor: 'rgba(241, 196, 15, 0.2)',
+                            tension: 0.1,
+                            fill: true,
+                        }]
+                    },
+                    options: {
+                        ...commonOptions,
+                        plugins: {
+                            ...commonOptions.plugins,
+                            title: {
+                                ...commonOptions.plugins.title,
+                                text: 'Soil Temperature Over Time',
+                            },
+                        },
+                    }
+                });
+        
+                const soilHumidityChart = new Chart(document.getElementById('soilHumidityChart'), {
+                    type: 'line',
+                    data: {
+                        labels: data.timestamps,
+                        datasets: [{
+                            label: 'Soil Humidity (%)',
+                            data: data.soilHumidity,
+                            borderColor: 'rgba(46, 204, 113, 1)',
+                            backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                            tension: 0.1,
+                            fill: true,
+                        }]
+                    },
+                    options: {
+                        ...commonOptions,
+                        plugins: {
+                            ...commonOptions.plugins,
+                            title: {
+                                ...commonOptions.plugins.title,
+                                text: 'Soil Humidity Over Time',
+                            },
+                        },
+                    }
+                });
+        
+                return { humidityChart, windSpeedChart, soilTempChart, soilHumidityChart };
+            }
+        
+            function updateCharts(charts, data) {
+                charts.humidityChart.data.labels = data.timestamps;
+                charts.humidityChart.data.datasets[0].data = data.humidity;
+                charts.humidityChart.update();
+        
+                charts.windSpeedChart.data.labels = data.timestamps;
+                charts.windSpeedChart.data.datasets[0].data = data.windSpeed;
+                charts.windSpeedChart.update();
+        
+                charts.soilTempChart.data.labels = data.timestamps;
+                charts.soilTempChart.data.datasets[0].data = data.soilTemp;
+                charts.soilTempChart.update();
+        
+                charts.soilHumidityChart.data.labels = data.timestamps;
+                charts.soilHumidityChart.data.datasets[0].data = data.soilHumidity;
+                charts.soilHumidityChart.update();
+            }
+        
+            window.addEventListener('load', () => {
+                let charts;
+        
+                const fetchData = async () => {
+                    try {
+                        const response = await fetch('/api/stats');
+                        const data = await response.json();
+                        console.log('Received update:', data);
+        
+                        updateCurrentConditions(data);
+        
+                        if (!charts) {
+                            charts = createCharts(data);
+                        } else {
+                            updateCharts(charts, data);
+                        }
+                    } catch (error) {
+                        console.error('Error fetching data:', error);
+                    }
+                };
+        
+                setInterval(fetchData, 1000);
+            });
+        </script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
