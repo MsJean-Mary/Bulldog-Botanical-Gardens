@@ -87,94 +87,23 @@
         <img src="" alt="Enlarged gallery image">
     </div>
 
-    <script>
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            const backToTop = document.querySelector('.back-to-top');
-            header.classList.toggle('scrolled', window.scrollY > 0);
-            backToTop.classList.toggle('visible', window.scrollY > 300);
-        });
+    <!-- Script for navbar colors-->
+    <script src="js/index/topbar.js"></script>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
+    <!-- Script for mail box-->
+    <script src="js/index/mail.js"></script>
 
-        document.querySelectorAll('.content-block').forEach(block => {
-            observer.observe(block);
-        });
+    <!-- Script for lightbox-->
+    <script src="js/index/lightbox.js"></script>
 
-        function openMail(event) {
-            event.preventDefault();
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            const mailtoLink = `mailto:contact@sermhs.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-            window.location.href = mailtoLink;
-        }
+    <!-- Script for smooth navbar-->
+    <script src="js/index/smoothnav.js"></script>
 
-        // lightbox 
-        const lightbox = document.querySelector('.lightbox');
-        const lightboxImg = lightbox.querySelector('img');
-        const lightboxClose = lightbox.querySelector('.lightbox-close');
+    <!-- Script for back to top button-->
+    <script src="js/index/backtotop.js"></script>
 
-        document.querySelectorAll('.gallery-item img').forEach(img => {
-            img.addEventListener('click', () => {
-                lightboxImg.src = img.src;
-                lightbox.style.display = 'flex';
-            });
-        });
-
-        lightboxClose.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-        });
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                lightbox.style.display = 'none';
-            }
-        });
-
-        // smooth scrolling for nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // back to top button
-        document.querySelector('.back-to-top').addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const eventsList = document.querySelector('#about .content-block ul');
-
-            fetch('/api/events')
-                .then(response => response.json())
-                .then(data => {
-                    eventsList.innerHTML = ''; // Clear existing content
-
-                    data.forEach(event => {
-                        const li = document.createElement('li');
-                        li.textContent = `${event.description} - ${event.date}`;
-                        eventsList.appendChild(li);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching events:', error);
-                    eventsList.innerHTML = '<li>Error loading events. Please try again later.</li>';
-                });
-        });
-    </script>
-    </script>
+    <!-- Script to load events content-->
+    <script src="js/index/events.js"></script>
 
     <!--Load navbar-->
     <script src="js/navbar.js"></script>

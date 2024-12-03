@@ -6,7 +6,7 @@
 - [x] Decent styles
 
 ## By Monday, Nov 5th 2024
-- [x] Complete index page (exclduing sigh in logic and images, will be added later)
+- [x] Complete index page (excluding sign in logic and images, will be added later)
 - [x] Recipies page w/ dynamically imported recipies, updated automatically - mostly done
 
 ## Delayed due to lack of resources
