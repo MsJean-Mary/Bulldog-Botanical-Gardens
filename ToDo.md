@@ -1,5 +1,10 @@
 # To-Do List
 
+## Finished
+- [x] Complete index, recipes, and health page.
+- [x] Dynamically loaded content, navbar, recipes, health benefits
+- [x] Decent styles
+
 ## By Monday, Nov 5th 2024
 - [x] Complete index page (exclduing sigh in logic and images, will be added later)
 - [x] Recipies page w/ dynamically imported recipies, updated automatically - mostly done
