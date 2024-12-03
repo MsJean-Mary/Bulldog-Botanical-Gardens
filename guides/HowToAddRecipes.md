@@ -18,8 +18,7 @@ Follow these steps to add your own recipes to the `recipes.json` file:
             "steps": [
                  "Step 1",
                  "Step 2",
-                 "Step 3",
-                 ...
+                 "Step 3"
             ]
       }
       ```
