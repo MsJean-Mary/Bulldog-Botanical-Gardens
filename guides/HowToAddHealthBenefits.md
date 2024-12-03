@@ -36,7 +36,7 @@ Follow these steps to add new health benefits to the `health.json` file:
     ```
 
 6. **Save the File:**
-    - After adding your new health benefit, save the `health.json` file.
+    - After adding your new health benefit, save the `health.json` file. This is called "Commiting" in github.
 
 7. **Verify the JSON Format:**
     - Ensure that the JSON format is correct.

@@ -55,7 +55,7 @@ Follow these steps to add your own recipes to the `recipes.json` file:
     ```
 
 6. **Save the File:**
-    - After adding your new recipe, save the `recipes.json` file.
+    - After adding your new recipe, save the `recipes.json` file. This is called "Commiting" in github.
 
 7. **Verify the JSON Format:**
     - Ensure that the JSON format is correct.
