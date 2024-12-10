@@ -23,10 +23,10 @@ Follow these steps to set up and run the project:
      npm run start  
      ```  
 
-## Editing the Website  
+## Useful Materials
 
-For instructions on editing specific parts of the website:  
-- Check the [ToDo.md](https://github.com/MsJean-Mary/SERMHS_SchoolGarden/blob/main/ToDo.md) file for tasks and updates.  
-- Explore the [guides folder](https://github.com/MsJean-Mary/SERMHS_SchoolGarden/tree/main/guides) for detailed editing guides. If you are looking at the guides and see code click the button at the top that says preview to be able to see the correct version. 
+- Refer to the [NeededMaterials.md](https://github.com/Xordas/SERMHS_SchoolGarden/blob/main/NeededMaterials.md) for a list of things we need to complete the project.
+- Check the [ToDo.md](https://github.com/Xordas/SERMHS_SchoolGarden/blob/main/ToDo.md) file for tasks and updates.  
+- Explore the [Wiki](https://github.com/Xordas/SERMHS_SchoolGarden/wiki) for detailed editing guides. 
 
 ---

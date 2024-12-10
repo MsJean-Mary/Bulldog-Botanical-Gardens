@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: node-app
+    env: node
+    buildCommand: npm install
+    startCommand: npm run start
+    autoDeploy: true
+    branch: main
+    plan: free

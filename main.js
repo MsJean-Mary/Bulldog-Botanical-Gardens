@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'about.html'));
+});
+
 app.get('/recipes', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'recipes.html'));
 });
@@ -94,6 +98,11 @@ app.get('/api/stats', (req, res) => {
     };
 
     checkFileAndSend();
+});
+
+// 404 handler, ALWAYS keep at the bottom of the file
+app.use((req, res, next) => {
+    res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
 
