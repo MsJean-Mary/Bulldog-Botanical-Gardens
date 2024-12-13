@@ -1,0 +1,28 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "Welcome to SERMHS Garden",
+        "date": "2024-03-01",
+        "author": "Garden Team",
+        "excerpt": "Discover the beauty and benefits of our school garden project.",
+        "content": "Welcome to the SERMHS Garden blog! We're excited to share our journey of creating and maintaining a thriving garden at our school. In this space, we'll be sharing updates, gardening tips, and the positive impact our garden has on our school community."
+      },
+      {
+        "id": 2,
+        "title": "Spring Planting Guide",
+        "date": "2024-03-15",
+        "author": "Ms. Green",
+        "excerpt": "Learn what to plant in your garden this spring for a bountiful harvest.",
+        "content": "Spring is here, and it's time to get planting! In this post, we'll guide you through the best vegetables, herbs, and flowers to plant in your garden this spring. From tomatoes to marigolds, we've got you covered with tips on when and how to plant for a successful growing season."
+      },
+      {
+        "id": 3,
+        "title": "The Benefits of School Gardens",
+        "date": "2024-04-01",
+        "author": "Principal Johnson",
+        "excerpt": "Explore the educational and health benefits of school gardens.",
+        "content": "School gardens offer numerous benefits to students, teachers, and the community. In this post, we'll discuss how gardens enhance education by providing hands-on learning experiences, promote healthy eating habits, and foster environmental stewardship among our students."
+      }
+    ]
+  }

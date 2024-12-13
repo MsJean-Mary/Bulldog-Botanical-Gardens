@@ -33,6 +33,10 @@ app.get('/stats', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'stats.html'));
 });
 
+app.get('/blog', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'blog.html'));
+});
+
 // we could just put the json's in the public folder but whats the fun in that?
 
 app.get('/api/recipes', (req, res) => {
@@ -42,6 +46,32 @@ app.get('/api/recipes', (req, res) => {
             return res.status(500).send('Unable to read recipes file');
         }
         res.json(JSON.parse(data));
+    });
+});
+
+app.get('/api/blog-posts', (req, res) => {
+    const blogPostsFile = path.join(__dirname, 'DynamicContent', 'blog-posts.json');
+    fs.readFile(blogPostsFile, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Unable to read blog posts file');
+        }
+        res.json(JSON.parse(data));
+    });
+});
+
+app.get('/api/blog-posts/:id', (req, res) => {
+    const blogPostsFile = path.join(__dirname, 'DynamicContent', 'blog-posts.json');
+    fs.readFile(blogPostsFile, 'utf8', (err, data) => {
+        if (err) {
+            return res.status(500).send('Unable to read blog posts file');
+        }
+        const posts = JSON.parse(data).posts;
+        const post = posts.find(p => p.id === parseInt(req.params.id));
+        if (post) {
+            res.json(post);
+        } else {
+            res.status(404).send('Post not found');
+        }
     });
 });
 
