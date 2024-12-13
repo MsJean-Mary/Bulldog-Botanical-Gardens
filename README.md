@@ -27,6 +27,6 @@ Follow these steps to set up and run the project:
 
 - Refer to the [NeededMaterials.md](https://github.com/Xordas/SERMHS_SchoolGarden/blob/main/NeededMaterials.md) for a list of things we need to complete the project.
 - Check the [ToDo.md](https://github.com/Xordas/SERMHS_SchoolGarden/blob/main/ToDo.md) file for tasks and updates.  
-- Explore the [Wiki](https://github.com/Xordas/SERMHS_SchoolGarden/wiki) for detailed editing guides. 
+- Explore the [Guides](https://github.com/MsJean-Mary/SERMHS_SchoolGarden/tree/main/Guides) for detailed editing guides. 
 
 ---
